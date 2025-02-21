@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const LoginComponent = () => {
   const [userDetail, setUserDetail] = useState({
-    email: "ghanshyammangla@gmail.com",
+    email: "ghanshyam@gmail.com",
     password: "mangla",
   });
   const { storeTokenInLS, API } = useAuth();
