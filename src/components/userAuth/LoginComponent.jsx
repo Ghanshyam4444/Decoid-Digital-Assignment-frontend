@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const LoginComponent = () => {
   const [userDetail, setUserDetail] = useState({
-    email: "ghanshyammangla15@gmail.com",
+    email: "ghanshyammangla@gmail.com",
     password: "mangla",
   });
   const { storeTokenInLS, API } = useAuth();
@@ -14,11 +14,14 @@ const LoginComponent = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${API}/api/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userDetail),
-      });
+      const response = await fetch(
+        `https://decoid-digital-assignment-backend.vercel.app/api/auth/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(userDetail),
+        }
+      );
       const userInfo = await response.json();
       if (response.ok) {
         alert("Login successful");
