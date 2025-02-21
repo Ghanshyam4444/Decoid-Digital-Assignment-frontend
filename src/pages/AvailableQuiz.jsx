@@ -10,12 +10,15 @@ const AvailableQuiz = () => {
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
-        const response = await fetch(`${API}/api/AvailableQuiz/getAllQuiz`, {
-          method: "GET",
-          headers: {
-            Authorization: authorization_token,
-          },
-        });
+        const response = await fetch(
+          `https://decoid-digital-assignment-backend.vercel.app/api/AvailableQuiz/getAllQuiz`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: authorization_token,
+            },
+          }
+        );
         const data = await response.json();
         setQuizzes(data.quizzes);
       } catch (error) {

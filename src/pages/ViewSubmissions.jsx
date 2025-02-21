@@ -14,7 +14,7 @@ const ViewSubmissions = () => {
     const fetchSubmissions = async () => {
       try {
         const response = await fetch(
-          `${API}/api/MyQuiz/getAllAnswers/${quizId}`,
+          `https://decoid-digital-assignment-backend.vercel.app/api/MyQuiz/getAllAnswers/${quizId}`,
           {
             method: "GET",
             headers: {

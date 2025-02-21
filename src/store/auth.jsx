@@ -23,12 +23,15 @@ export const AuthProvider = ({ children }) => {
 
   const userAuthentication = async () => {
     try {
-      const response = await fetch(`${API}/api/auth/userDetails`, {
-        method: "GET",
-        headers: {
-          Authorization: authorization_token,
-        },
-      });
+      const response = await fetch(
+        `https://decoid-digital-assignment-backend.vercel.app/api/auth/userDetails`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorization_token,
+          },
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         setUser(data);

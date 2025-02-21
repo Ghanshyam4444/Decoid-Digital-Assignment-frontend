@@ -77,16 +77,19 @@ const CreateQuiz = () => {
 
   const AddQuiz = async () => {
     try {
-      const response = await fetch(`${API}/api/admin/AddQuiz`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: authorization_token,
-        },
-        body: JSON.stringify({
-          questions: questions,
-        }),
-      });
+      const response = await fetch(
+        `https://decoid-digital-assignment-backend.vercel.app/api/admin/AddQuiz`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: authorization_token,
+          },
+          body: JSON.stringify({
+            questions: questions,
+          }),
+        }
+      );
       if (!response.ok) {
         throw new Error("Failed to submit quiz");
       }

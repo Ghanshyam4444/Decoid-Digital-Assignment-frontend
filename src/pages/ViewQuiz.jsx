@@ -22,7 +22,7 @@ const ViewQuiz = () => {
     const fetchQuestions = async () => {
       try {
         const response = await fetch(
-          `${API}/api/AvailableQuiz/getQuizDetails/${id}`,
+          `https://decoid-digital-assignment-backend.vercel.app/api/AvailableQuiz/getQuizDetails/${id}`,
           {
             method: "GET",
             headers: {
@@ -123,7 +123,7 @@ const ViewQuiz = () => {
   const submitResponses = async () => {
     try {
       const response = await fetch(
-        `${API}/api/AvailableQuiz/submitResponse/${id}`,
+        `https://decoid-digital-assignment-backend.vercel.app/api/AvailableQuiz/submitResponse/${id}`,
         {
           method: "POST",
           headers: {

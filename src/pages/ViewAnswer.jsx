@@ -12,7 +12,7 @@ const ViewAnswer = () => {
     const fetchAnswerDetails = async () => {
       try {
         const response = await fetch(
-          `${API}/api/MyQuiz/getAnswerDetails/${answerId}`,
+          `https://decoid-digital-assignment-backend.vercel.app/api/MyQuiz/getAnswerDetails/${answerId}`,
           {
             method: "POST",
             headers: {
