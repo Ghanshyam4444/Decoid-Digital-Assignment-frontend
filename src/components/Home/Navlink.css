@@ -1,0 +1,13 @@
+.nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: aqua;
+}
+
+.header-container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
